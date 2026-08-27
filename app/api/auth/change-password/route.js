@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server';
 import getDb from '@/lib/db';
 import { getAuthSession, hashPassword } from '@/lib/auth';
 
-export const dynamic = 'force-static';
-
 export async function PUT(request) {
   try {
     const username = await getAuthSession();

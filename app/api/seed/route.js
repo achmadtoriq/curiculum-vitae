@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import getDb, { seedDatabase, getFullCvData } from '@/lib/db';
 
-export const dynamic = 'force-static';
-
 export async function POST() {
   try {
     const db = getDb();
