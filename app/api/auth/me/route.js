@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getAuthSession } from '@/lib/auth';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
   try {
     const username = await getAuthSession();

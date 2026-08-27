@@ -3,6 +3,8 @@ import getDb from '@/lib/db';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth-options';
 
+export const dynamic = 'force-static';
+
 export async function POST(req) {
   try {
     const session = await getServerSession(authOptions);
